@@ -1,0 +1,39 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+        <th>
+            名称
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in listFiltered">
+        <td>
+            {{item.age}}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<pagination total-items="totalItems" items-per-page="pageSize" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" ng-model="currentPage"
+            max-size="maxSize" ng-change="pageChanged()" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+
+<div>
+    共{{totalItems}}条数据, 每页{{pageSize}}条, 当前第{{currentPage}}页, 共{{maxSize}}页
+</div>
+<div>
+    {{logs}}
+</div>
+
+
+<pagination total-items="totalItemsTwo" items-per-page="pageSize" previous-text="上一页" next-text="下一页" first-text="首页"
+            last-text="尾页" ng-model="currentPageTwo"
+            max-size="maxSize" ng-change="pageChangedTwo()" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+
+<div>
+    共{{totalItemsTwo}}条数据, 每页{{pageSize}}条, 当前第{{currentPageTwo}}页, 共{{maxSize}}页
+</div>
+<div>
+    {{logs}}
+</div>

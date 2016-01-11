@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+<title>Simple app</title>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>-->
+<script src="angular.min.js"></script>
+<script src="scripts.js"></script>
+</head>
+<body>
+
+<div ng-controller="mainController">
+	<input ng-model="name" type="text" placeholder="Your name">
+	<h1>Hello {{ name }}</h1>
+
+	<button ng-click="print()">print name</button>
+</div>
+
+
+
+</body>
+</html>
